@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { getMissions } from '../../API/services';
 import logo from '../../assets/logo192.png';
+import retrieveMissions from '../../redux/missions/actions';
 import style from './Navbar.module.scss';
 
 function Navbar() {
@@ -39,7 +39,7 @@ function Navbar() {
   const handleMissionData = (path) => {
     if (path === '/missions') {
       useEffect(() => {
-        dispatch(getMissions());
+        dispatch(retrieveMissions());
       }, []);
     }
   };
