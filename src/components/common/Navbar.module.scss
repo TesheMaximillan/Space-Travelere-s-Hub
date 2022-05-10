@@ -1,24 +1,37 @@
 .nav {
   display: flex;
-  flex-direction: column;
-}
+  justify-content: space-between;
+  padding: 3rem;
+  border-bottom: 2px solid #efefef;
 
-.nav__links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  
-  .logo {
-    width: 2rem;
-    height: 2rem;
-  }
 
-  .logo-text {
-    font-size: 50px;
-  }
-
-  .item__link {
+  .logoContainer {
     display: flex;
-    flex-direction: column;
+    .logoImg {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  .logoText {
+    margin-left: 3rem;
+  }
+
+  .navItems {
+    display: flex;
+    align-items: center;
+    .item {
+      list-style: none;
+      padding: 0 2rem;
+
+      &:last-child {
+        border-left: 1px solid #000;
+      }
+      
+      .itemLink {
+        text-decoration: none;
+
+      }
+    }
   }
 }
