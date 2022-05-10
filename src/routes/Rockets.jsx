@@ -1,8 +1,11 @@
 import React from 'react';
+import Navbar from '../components/common/Navbar';
 
 function Rockets() {
   return (
-    <div>Rockets</div>
+    <Navbar>
+      <div>Rockets</div>
+    </Navbar>
   );
 }
 
