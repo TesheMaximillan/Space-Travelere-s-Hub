@@ -1,6 +1,8 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo192.png';
+import retrieveRockets from '../../redux/rockets/activities';
 import style from './Navbar.module.scss';
 
 function Navbar() {
@@ -31,6 +33,12 @@ function Navbar() {
     itemLink,
     logoContainer,
   } = style;
+
+  const dispatch = useDispatch();
+
+  useDispatch(() => {
+    dispatch(retrieveRockets());
+  }, []);
 
   return (
     <div className={nav}>
