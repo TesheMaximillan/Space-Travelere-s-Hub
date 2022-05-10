@@ -9,7 +9,7 @@ function Navbar() {
   const links = [
     {
       id: 1,
-      path: '/rockets',
+      path: '/',
       text: 'Rockets',
     },
     {
@@ -18,7 +18,7 @@ function Navbar() {
       text: 'Missions',
     },
     {
-      id: 2,
+      id: 3,
       path: '/myprofiles',
       text: 'Myprofile',
     },
@@ -36,13 +36,9 @@ function Navbar() {
 
   const dispatch = useDispatch();
 
-  const handleMissionData = (path) => {
-    if (path === '/missions') {
-      useEffect(() => {
-        dispatch(retrieveMissions());
-      }, []);
-    }
-  };
+  useEffect(() => {
+    dispatch(retrieveMissions());
+  }, []);
 
   return (
     <div className={nav}>
@@ -53,7 +49,7 @@ function Navbar() {
       <ul className={navItems}>
         {links.map((link) => (
           <li key={link.id} className={item}>
-            <NavLink to={link.path} onClick={() => handleMissionData(link.path)} className={`${itemLink}`}>
+            <NavLink to={link.path} className={`${itemLink}`}>
               {link.text}
             </NavLink>
           </li>
