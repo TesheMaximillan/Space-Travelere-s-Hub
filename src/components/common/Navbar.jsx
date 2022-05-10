@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { getMissions } from '../../API/services';
 import logo from '../../assets/logo192.png';
 import style from './Navbar.module.scss';
 
@@ -32,6 +34,16 @@ function Navbar() {
     logoContainer,
   } = style;
 
+  const dispatch = useDispatch();
+
+  const handleMissionData = (path) => {
+    if (path === '/missions') {
+      useEffect(() => {
+        dispatch(getMissions());
+      }, []);
+    }
+  };
+
   return (
     <div className={nav}>
       <div className={logoContainer}>
@@ -41,7 +53,7 @@ function Navbar() {
       <ul className={navItems}>
         {links.map((link) => (
           <li key={link.id} className={item}>
-            <NavLink to={link.path} className={`${itemLink}`}>
+            <NavLink to={link.path} onClick={() => handleMissionData(link.path)} className={`${itemLink}`}>
               {link.text}
             </NavLink>
           </li>
