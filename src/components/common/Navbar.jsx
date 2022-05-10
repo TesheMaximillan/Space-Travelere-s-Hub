@@ -12,7 +12,7 @@ function Navbar() {
     },
     {
       id: 2,
-      path: '/missions',
+      path: '/',
       text: 'Missions',
     },
     {
