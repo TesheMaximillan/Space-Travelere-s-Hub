@@ -1,3 +1,4 @@
+/* eslint-disable default-param-last */
 import RETRIEVE_ROCKETS from './types';
 
 const rocketReducer = (state = [], action) => {

@@ -16,7 +16,7 @@ function Navbar() {
       text: 'Missions',
     },
     {
-      id: 2,
+      id: 3,
       path: '/myprofiles',
       text: 'Myprofile',
     },
