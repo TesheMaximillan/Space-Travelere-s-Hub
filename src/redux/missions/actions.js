@@ -5,13 +5,12 @@ import RETRIEVE_MISSIONS from './types';
 const retrieveMissions = () => async (dispatch) => {
   // Get missions from API
   const response = await getMissions();
-  const { mission_id, mission_name, description } = response.data;
 
   // Organizing Missions
-  const missions = response.data.map(() => ({
-    mission_id,
-    mission_name,
-    description,
+  const missions = response.data.map((data) => ({
+    mission_id: data.mission_id,
+    mission_name: data.mission_name,
+    description: data.description,
   }));
 
   // Add book to the store
