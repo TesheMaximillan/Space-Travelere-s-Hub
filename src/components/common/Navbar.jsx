@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo192.png';
+import retrieveMissions from '../../redux/missions/actions';
 import style from './Navbar.module.scss';
 
 function Navbar() {
   const links = [
     {
       id: 1,
-      path: '/rockets',
+      path: '/',
       text: 'Rockets',
     },
     {
@@ -31,6 +33,12 @@ function Navbar() {
     itemLink,
     logoContainer,
   } = style;
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(retrieveMissions());
+  }, []);
 
   return (
     <div className={nav}>
