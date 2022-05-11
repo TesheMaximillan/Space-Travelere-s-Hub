@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-const rocketAPI = axios.create({
-  endPoint: 'https://api.spacexdata.com/v3/rockets',
+const rocketsAPI = axios.create({
+  baseURL: 'https://api.spacexdata.com/v3/rockets',
   headers: { 'Content-type': 'application/json' },
 });
 
-const missionAPI = axios.create({
-  endPoint: 'https://api.spacexdata.com/v3/missions',
+const missionsAPI = axios.create({
+  baseURL: 'https://api.spacexdata.com/v3/missions',
   headers: { 'Content-type': 'application/json' },
 });
 
-export { rocketAPI, missionAPI };
+export { rocketsAPI, missionsAPI };

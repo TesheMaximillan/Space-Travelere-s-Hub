@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo192.png';
@@ -9,12 +9,12 @@ function Navbar() {
   const links = [
     {
       id: 1,
-      path: '/rockets',
+      path: '/',
       text: 'Rockets',
     },
     {
       id: 2,
-      path: '/',
+      path: '/missions',
       text: 'Missions',
     },
     {
@@ -36,7 +36,7 @@ function Navbar() {
 
   const dispatch = useDispatch();
 
-  useDispatch(() => {
+  useEffect(() => {
     dispatch(retrieveRockets());
   }, []);
 

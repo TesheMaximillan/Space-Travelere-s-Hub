@@ -1,6 +1,6 @@
-import { rocketAPI, missionAPI } from './API';
+import { rocketsAPI, missionsAPI } from './API';
 
-const getRocket = () => rocketAPI.get();
-const getMission = () => missionAPI.get();
+const getRockets = () => rocketsAPI.get();
+const getMissions = () => missionsAPI.get();
 
-export { getMission, getRocket };
+export { getMissions, getRockets };
