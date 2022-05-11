@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import { getMissions } from '../../API/services';
-import RETRIEVE_MISSIONS from './types';
+import { CHANGE_MISSION_STATUS, RETRIEVE_MISSIONS } from './types';
 
 const retrieveMissions = () => async (dispatch) => {
   // Get missions from API
@@ -13,8 +13,15 @@ const retrieveMissions = () => async (dispatch) => {
     description: data.description,
   }));
 
-  // Add book to the store
-  dispatch({ type: RETRIEVE_MISSIONS, missions });
+  const newMission = missions.map((mission) => ({ ...mission, status: false }));
+
+  // Add mission to the store
+  dispatch({ type: RETRIEVE_MISSIONS, newMission });
 };
 
-export default retrieveMissions;
+const updateMissionStatus = (id, status) => ({
+  type: CHANGE_MISSION_STATUS,
+  payload: { id, status },
+});
+
+export { retrieveMissions, updateMissionStatus };

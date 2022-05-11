@@ -1,18 +1,22 @@
+/* eslint-disable camelcase */
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { updateMissionStatus } from '../../redux/missions/actions';
 import Status from './Status';
 
 function Mission({ mission }) {
-  const [status, setStatus] = useState('NOT A MEMBER');
+  const dispatch = useDispatch();
+  const {
+    mission_id, mission_name, status, description,
+  } = mission;
 
-  const handleStatus = () => (status === 'NOT A MEMBER'
-    ? setStatus('Active Member')
-    : setStatus('NOT A MEMBER'));
+  const handleStatus = () => dispatch(updateMissionStatus(mission_id, !status));
 
   return (
     <tr>
-      <td>{mission.mission_name}</td>
-      <td>{mission.description}</td>
+      <td>{mission_name}</td>
+      <td>{description}</td>
       <Status status={status} handleStatus={handleStatus} />
     </tr>
   );
