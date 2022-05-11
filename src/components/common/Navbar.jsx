@@ -33,6 +33,7 @@ function Navbar() {
     item,
     itemLink,
     logoContainer,
+    selectedItem,
   } = style;
 
   const dispatch = useDispatch();
@@ -54,7 +55,7 @@ function Navbar() {
       <ul className={navItems}>
         {links.map((link) => (
           <li key={link.id} className={item}>
-            <NavLink to={link.path} className={`${itemLink}`}>
+            <NavLink to={link.path} className={({ isActive }) => (isActive ? `${itemLink} ${selectedItem}` : itemLink)}>
               {link.text}
             </NavLink>
           </li>
