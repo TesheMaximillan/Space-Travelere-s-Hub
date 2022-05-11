@@ -7,10 +7,10 @@ function Status({ status, handleStatus }) {
     btnMission, statusBg, btnLeave, statusActive,
   } = styles;
 
-  if (status === 'Active Member') {
+  if (status) {
     return (
       <>
-        <td><span className={statusActive}>{status}</span></td>
+        <td><span className={statusActive}>Active Member</span></td>
         <td>
           <button type="button" className={`${btnMission} ${btnLeave}`} onClick={handleStatus}>
             Leave Mission
@@ -22,7 +22,7 @@ function Status({ status, handleStatus }) {
 
   return (
     <>
-      <td><span className={statusBg}>{status}</span></td>
+      <td><span className={statusBg}>NOT A MEMBER</span></td>
       <td>
         <button type="button" className={btnMission} onClick={handleStatus}>
           Join Mission
