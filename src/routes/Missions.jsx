@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Mission from '../components/Mission';
+import Mission from '../components/missions/Mission';
+import Thead from '../components/missions/Thead';
 import styles from './Missions.module.scss';
 
 function Missions() {
@@ -11,19 +12,12 @@ function Missions() {
   return (
     <table className={table}>
       <thead>
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th> </th>
-        </tr>
-
+        <Thead />
       </thead>
       <tbody>
         {missions && missions.map((mission) => (
-          <Mission key={mission.id} mission={mission} />
+          <Mission key={mission.mission_id} mission={mission} />
         ))}
-
       </tbody>
       <tfoot />
     </table>

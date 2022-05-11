@@ -10,7 +10,7 @@ function Mission({ mission }) {
     : setStatus('NOT A MEMBER'));
 
   return (
-    <tr key={mission.id}>
+    <tr>
       <td>{mission.mission_name}</td>
       <td>{mission.description}</td>
       <Status status={status} handleStatus={handleStatus} />

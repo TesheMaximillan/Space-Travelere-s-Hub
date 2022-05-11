@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import Navbar from './components/common/Navbar';
-import Myprofile from './components/Myprofile';
+import Myprofile from './components/common/Myprofile';
 import Missions from './routes/Missions';
 import Rockets from './routes/Rockets';
 
