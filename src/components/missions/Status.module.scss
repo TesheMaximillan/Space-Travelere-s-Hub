@@ -1,7 +1,7 @@
 @mixin status {
   display: inline-block;
-  padding: 0 .5rem;
-  border-radius: .5rem;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
   width: max-content;
   color: #fff;
 }
@@ -10,8 +10,8 @@
   font-family: inherit;
   font-size: inherit;
   width: max-content;
-  padding: .5rem;
-  border-radius: .5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   background-color: #fff;
 }
 
@@ -22,9 +22,12 @@
 
 .statusBg {
   @include status;
+
   background-color: #6d757d;
 }
+
 .statusActive {
   @include status;
+
   background-color: #18a2b8;
 }
