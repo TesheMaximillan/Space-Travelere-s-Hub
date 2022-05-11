@@ -17,21 +17,18 @@ function Rockets() {
   return (
     <div className={rocketsContainer}>
       {rockets && rockets.map((rocket) => (
-        <ul key={rocket.rocket_id} className={rocketsItems}>
-
-          <li>
-            <img className={rocketsImg} src={rocket.flickr_images} alt="Rocket setoff" />
-          </li>
-          <li className={rocketsTitle}>
-            {rocket.rocket_name}
-          </li>
-          <li className={rocketsDescr}>
-            {rocket.description}
-          </li>
-          <li>
-            <button className={Btn} type="submit">Reserve Rocket</button>
-          </li>
-        </ul>
+        <div key={rocket.rocket_id} className={rocketsItems}>
+          <img className={rocketsImg} src={rocket.flickr_images} alt="Rocket setoff" />
+          <div>
+            <span className={rocketsTitle}>
+              {rocket.rocket_name}
+            </span>
+            <span className={rocketsDescr}>
+              {rocket.description}
+            </span>
+            <span><button className={Btn} type="submit">Reserve Rocket</button></span>
+          </div>
+        </div>
       ))}
     </div>
   );
