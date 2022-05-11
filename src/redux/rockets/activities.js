@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { getRockets } from '../../API/provision';
+import { getRockets } from '../../API/services';
 import RETRIEVE_ROCKETS from './types';
 
 const retrieveRockets = () => async (dispatch) => {
