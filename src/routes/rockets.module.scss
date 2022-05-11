@@ -1,0 +1,43 @@
+.rocketsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 10px;
+  
+  .rocketsItems {
+    display: flex;
+    list-style: none;
+
+    flex-direction: column;
+
+    .rocketsItems li {
+      display: flex;
+      
+    }
+
+    .rocketsTitle {
+      display: flex;
+      font-size: 20px;
+    }
+
+    .rocketsImg {
+      max-width: 20rem;
+    }
+  
+    .rocketsDescr {
+      display: flex;
+      margin: 0.5rem 0;
+      line-height: 2rem;
+    }
+  
+    .Btn {
+      display: flex;
+      flex-direction: row;
+      padding: 5px;
+      margin-top: 5px;
+      background-color: #5d9ee9;
+      border: none;
+      font-size: 18px;
+    }
+  }
+}

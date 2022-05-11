@@ -1,39 +1,40 @@
-/* eslint-disable no-param-reassign */
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+/* eslint-disable no-undef */
+import React from 'react';
+import { useSelector } from 'react-redux';
+import styles from './rockets.module.scss';
 
-export const getRocketData = createAsyncThunk('rocket/getData', async () =>{
-  const response = await axios('https://api.spacexdata.com/v3/rockets');
-  return response.data;
-});
+const {
+  rocketsContainer,
+  rocketsItems,
+  rocketsTitle,
+  rocketsImg,
+  rocketsDescr,
+  Btn,
+} = styles;
 
-const rocketSlice = createSlice({
-  name: 'rocketsSlice',
-  initialState: {
-    value: [],
-  },
-  reducers: {},
-  extraReducers: {
-    [getRocketData.fulfilled]: (state, action) => {
-      state.value = action.payload;
-    },
-  },
-});
+function Rockets() {
+  const rockets = useSelector((state) => state.rocketReducer);
+  return (
+    <div className={rocketsContainer}>
+      {rockets && rockets.map((rocket) => (
+        <ul key={rocket.rocket_id} className={rocketsItems}>
 
-export default rocketSlice.reducer;
+          <li>
+            <img className={rocketsImg} src={rocket.flickr_images} alt="Rocket setoff" />
+          </li>
+          <li className={rocketsTitle}>
+            {rocket.rocket_name}
+          </li>
+          <li className={rocketsDescr}>
+            {rocket.description}
+          </li>
+          <li>
+            <button className={Btn} type="submit">Reserve Rocket</button>
+          </li>
+        </ul>
+      ))}
+    </div>
+  );
+}
 
-// import React from 'react';
-// import { useSelector } from 'react-redux';
-
-// function Rockets() {
-//   const rockets = useSelector((state) => state.rocketReducer);
-//   return (
-//     <ul>
-//       {rockets && rockets.map((rocket) => (
-//         <li key={rocket.rocket_id}>{rocket.rocket_name}</li>
-//       ))}
-//     </ul>
-//   );
-// }
-
-// export default Rockets;
+export default Rockets;
