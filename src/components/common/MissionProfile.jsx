@@ -8,8 +8,8 @@ function MissionProfile({ list }) {
     missions
     && missions.map(
       (mission) => mission.status && (
-      <li key={mission.mission_id} className={list}>
-        {mission.mission_name}
+      <li key={mission.missionId} className={list}>
+        {mission.missionName}
       </li>
       ),
     )
