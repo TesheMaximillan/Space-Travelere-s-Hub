@@ -10,8 +10,8 @@ const retrieveRockets = () => async (dispatch) => {
   const rockets = response.data.map((data) => ({
     rocket_id: data.rocket_id,
     rocket_name: data.rocket_name,
-    description: data.rocket_description,
-    flickr_images: [data.rocket_images],
+    description: data.description,
+    flickr_images: data.flickr_images[0],
   }));
 
   // combine data to the store

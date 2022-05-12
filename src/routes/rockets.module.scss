@@ -1,0 +1,44 @@
+.rocketsContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 20px;
+
+  .rocketsItems {
+    display: flex;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .rocketsTitle {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .rocketsImg {
+      width: 20%;
+      margin-right: 2rem;
+    }
+
+    .rocketsDescr {
+      margin: 0.5rem 0;
+      line-height: 2rem;
+    }
+
+    .Btn {
+      padding: 1rem;
+      background-color: #5d9ee9;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      border-radius: 5px;
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+  }
+}
