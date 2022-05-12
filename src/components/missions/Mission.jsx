@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
@@ -8,14 +7,14 @@ import Status from './Status';
 function Mission({ mission }) {
   const dispatch = useDispatch();
   const {
-    mission_id, mission_name, status, description,
+    missionId, missionName, description, status,
   } = mission;
 
-  const handleStatus = () => dispatch(updateMissionStatus(mission_id, !status));
+  const handleStatus = () => dispatch(updateMissionStatus(missionId, !status));
 
   return (
     <tr>
-      <td>{mission_name}</td>
+      <td>{missionName}</td>
       <td>{description}</td>
       <Status status={status} handleStatus={handleStatus} />
     </tr>

@@ -8,15 +8,13 @@ const retrieveMissions = () => async (dispatch) => {
 
   // Organizing Missions
   const missions = response.data.map((data) => ({
-    mission_id: data.mission_id,
-    mission_name: data.mission_name,
+    missionId: data.mission_id,
+    missionName: data.mission_name,
     description: data.description,
   }));
 
-  const newMission = missions.map((mission) => ({ ...mission, status: false }));
-
   // Add mission to the store
-  dispatch({ type: RETRIEVE_MISSIONS, newMission });
+  dispatch({ type: RETRIEVE_MISSIONS, missions });
 };
 
 const updateMissionStatus = (id, status) => ({

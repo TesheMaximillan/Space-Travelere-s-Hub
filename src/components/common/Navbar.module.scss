@@ -26,12 +26,23 @@
       padding: 0 2rem;
 
       &:last-child {
-        border-left: 1px solid #000;
+        border-left: 2px solid #00d7c6;
       }
 
       .itemLink {
         text-decoration: none;
+        color: #00d7c6;
+        font-weight: 700;
+
+        &:hover,
+        &:active {
+          border-bottom: 2px solid #00d7c6;
+        }
       }
     }
   }
+}
+
+.selectedItem {
+  border-bottom: 2px solid #00d7c6;
 }

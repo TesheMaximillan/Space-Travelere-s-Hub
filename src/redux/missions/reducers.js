@@ -4,11 +4,11 @@ import { CHANGE_MISSION_STATUS, RETRIEVE_MISSIONS } from './types';
 const missionReducer = (state = [], action) => {
   switch (action.type) {
     case RETRIEVE_MISSIONS:
-      return action.newMission;
+      return action.missions;
     case CHANGE_MISSION_STATUS: {
       const { id, status } = action.payload;
       const newState = state.map((mission) => {
-        if (mission.mission_id !== id) {
+        if (mission.missionId !== id) {
           return mission;
         }
         return { ...mission, status };
