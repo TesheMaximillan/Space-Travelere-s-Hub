@@ -1,7 +1,6 @@
 @mixin status {
   position: relative;
   bottom: 70px;
-  margin-bottom: rem;
   padding: 0 0.5rem;
   border-radius: 0.5rem;
   width: max-content;
@@ -11,7 +10,6 @@
 .btnRocket {
   font-family: inherit;
   font-size: 16px;
-  font-weight: 500;
   padding: 1rem;
   background-color: #2c85eb;
   color: #fff;
@@ -32,6 +30,7 @@
 
 .statusBg {
   @include status;
+
   font-family: inherit;
   font-size: x-large;
   font-weight: 700;
@@ -45,6 +44,7 @@
 
 .statusActive {
   @include status;
+  
   font-family: inherit;
   font-size: large;
   font-weight: 600;
