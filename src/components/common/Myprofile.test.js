@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Myprofile from './Myprofile';
-import renderContext from './storeMock';
+import renderContext from '../storeMock';
 
 describe('Myprofile component', () => {
   let component;
