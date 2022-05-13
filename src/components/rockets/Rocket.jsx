@@ -8,7 +8,7 @@ import styles from '../../routes/rockets.module.scss';
 function Rocket({ rocket }) {
   const dispatch = useDispatch();
   const {
-    rocketsImg, rocketName, displayWell, rocketId, description, status,
+    rocketsImg, rocketName, rocketId, description, status,
   } = rocket;
 
   const handleStatus = () => dispatch(updateRocketStatus(rocketId, !status));
@@ -19,12 +19,8 @@ function Rocket({ rocket }) {
         <span className={styles.rocketsTitle}>
           {rocketName}
         </span>
-        <div className={displayWell}>
-          <span className={styles.rocketsDescr}>
-            {description}
-          </span>
-          <StatusRes status={status} handleStatus={handleStatus} />
-        </div>
+
+        <StatusRes description={description} status={status} handleStatus={handleStatus} />
       </div>
     </div>
   );
