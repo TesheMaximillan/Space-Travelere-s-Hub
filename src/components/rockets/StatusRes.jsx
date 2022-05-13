@@ -11,7 +11,7 @@ function Status({ status, handleStatus }) {
     return (
       <>
         <div>
-          <span className={statusActive}>Why</span>
+          <span className={statusActive}>Reserved</span>
         </div>
         <div>
           <button type="button" className={`${btnRocket} ${btnLeave}`} onClick={handleStatus}>
