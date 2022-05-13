@@ -1,87 +1,57 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore App
+# Space Traveler's Hub
 
-> In this website, I creatde an MVP version of Bookstore App that allows:
+> In this project we are worked with the real live data from the SpaceX API. And in this project we build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.:
 
-    * Display a list of books.
-    * Add a book.
-    * Remove a selected book.:
+- The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section.
+- The Rockets section displays a list of all available SpaceX rockets. Users can book each rocket by clicking the reservation button or cancel the previously made booking.
+- The Missions section displays a list of current missions along with their brief description and participation status. There is also a button next to each mission that allows users to join the selected mission or leave the mission the user joined earlier.
+- The My Profile section displays all reserved rockets and space missions.
+- APIs > [Rockets](https://api.spacexdata.com/v3/rockets) | [Missions](https://api.spacexdata.com/v3/missions)
+## In this project we followed the following requirements
 
-## In this project I followed the following requirements
+* Actions are dispatched once and do not add data to store on every re-render
+* Rockets data are fetched when the application starts
+The mission data fetched data when use navigates to the mission actions
 
-### Phase 1
-
-* Reusable components are created.
-* React router are added and setted two `<Route>` and `<Link>` for the app navigation
-* Books page is crated and setted as the default view
-* BookLists are displayed in the book page
-* a book component is created for displaying single book
-* A form for adding book is created
-* a category page is craeted with a button "Check status" only
-
-### Phase 2
-
-* redux library and react-redux libraries are used.
-* Used a feature folder to structure the project.
-* Book actions and reducers are written using `ducks pattern`
-* categories actions and reducers written using `ducks pattern`
-* Redux stores are configured
-
-### Phase 3
-
-* Made states are immutable.
-* Initial state is changed by default value.
-* Redux provider is imported to the main component (`index.js`)
-* App is connected to Redux store
-* List of books are displayed in redux store
-* Books are added by using `useDispatch` method
-* Books are removed by using `useDispatch` method
-* Checkstatus functionality is when cattegory button is clicked
-
-### Phase 4
-
-* redux-tunk is added to my project as a middleware.
-* I used axios for making API calls.
-* Redux provider is imported to the main component (`index.js`)
-* book lists are loaded from api when the page is reloaded
-* addBook and removeBook features are modified to work with the API
-
-### Phase 5
-
-* I styled the website according to Zeplin's design
-* I created common modules like `Card` and `Button` for reusability
-* I applied component level styling using `scss`, and imported all of the components into `App.scss` file 
-* I applied `useEffect` and `useState` hooks for the circular progress bar and used a random number for the percentage
-* App deployed to Heroku
 ## Technologies
 
-* React
-* SCSS
+- React
+- Redux
+- SCSS
 
 ## Live Demo
 
-[Live Demo Link](https://bookstoreteshe.herokuapp.com/)
+[Live Demo Link](https://space-travelers-app-ht.herokuapp.com/myprofiles)
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/51437483/167161514-ddffb713-913c-4eec-af47-4280bc79da4c.png)
+**Rockets:** ![rockets](https://user-images.githubusercontent.com/51437483/168374076-8658bdc0-9b9b-4efd-90fb-984cbf34587a.JPG)
+**Missions:** ![mission](https://user-images.githubusercontent.com/51437483/168374064-b61e298c-7c93-4849-a3b9-ced1d0e8311a.JPG)
+**Myprofile:** ![myprofile](https://user-images.githubusercontent.com/51437483/168374037-0b43e096-f111-43d7-b1b1-a9f54f753341.JPG)
 
 ## Setup project in your local machine
 
 1. Clone the repository by using `git clone ...`
-2. Go to the project directory by using `cd Bookstore`
+2. Go to the project directory by using `cd Space-Traveler-s-Hub`
 3. run `npm install` to install the necessary packages
 4. run `npm start` to start the project
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Author
+## Authors
 
 👤 **Teshome Kurabachew**
 
-* GitHub: [@githubhandle](https://github.com/TesheMaximillan)
-* Twitter: [@twitterhandle](https://twitter.com/TesheKura)
-* LinkedIn: [LinkedIn](https://www.linkedin.com/in/teshome-kurabachew-aa8067180/)
+- GitHub: [@githubhandle](https://github.com/TesheMaximillan)
+- Twitter: [@twitterhandle](https://twitter.com/TesheKura)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/teshome-kurabachew-aa8067180/)
+
+👤 **Have Samuel**
+
+- GitHub: [Have-Samuel](https://github.com/Have-Samuel)
+- Twitter: [@samhave1](https://twitter.com/@samhave1)
+- LinkedIn: [Have Samuel Kabreebe](https://linkedin.com/in/Have-Samuel-Kabreebe)
 
 ## Credential
 
@@ -89,7 +59,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/TesheMaximillan/Bookstore/issues).
+Feel free to check the [issues page](https://github.com/TesheMaximillan/Space-Travelere-s-Hub/issues).
 
 ## Show your support
 
@@ -97,7 +67,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-* Microverse
+- Microverse
 
 ## 📝 License
 
