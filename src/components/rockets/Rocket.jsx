@@ -19,7 +19,6 @@ function Rocket({ rocket }) {
         <span className={styles.rocketsTitle}>
           {rocketName}
         </span>
-
         <StatusRes description={description} status={status} handleStatus={handleStatus} />
       </div>
     </div>
