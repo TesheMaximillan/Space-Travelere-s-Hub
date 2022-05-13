@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo192.png';
 import { retrieveMissions } from '../../redux/missions/actions';
-import retrieveRockets from '../../redux/rockets/activities';
+import { retrieveRockets } from '../../redux/rockets/activities';
 import style from './Navbar.module.scss';
 
 function Navbar() {
