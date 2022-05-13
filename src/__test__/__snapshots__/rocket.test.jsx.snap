@@ -3,41 +3,8 @@
 exports[`renders correctly 1`] = `
 Array [
   <div
-    className="rocketsItems"
-  >
-    <img
-      alt="Rocket setoff"
-      className="rocketsImg"
-    />
-    <div>
-      <span
-        className="rocketsTitle"
-      >
-        rocketName
-      </span>
-      <span>
-        <span
-          className="statusActive"
-        >
-          Reserved
-        </span>
-        <span
-          className="rocketsDescr"
-        >
-          description
-        </span>
-      </span>
-      <div>
-        <button
-          className="btnRocket btnLeave"
-          onClick={[Function]}
-          type="button"
-        >
-          Cancel Reservation
-        </button>
-      </div>
-    </div>
-  </div>,
+    className="rocketsContainer"
+  />,
   " ",
 ]
 `;
