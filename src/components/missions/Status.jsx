@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { Fragment } from 'react';
+import React from 'react';
 import styles from './Status.module.scss';
 
 function Status({ status, handleStatus }) {
