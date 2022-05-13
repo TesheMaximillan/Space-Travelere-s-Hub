@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import MissionProfile from './MissionProfile';
-import renderContext from './storeMock';
+import renderContext from '../storeMock';
 
 describe('MissionProfile component', () => {
   let component;
