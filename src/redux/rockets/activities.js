@@ -1,6 +1,5 @@
-/* eslint-disable no-undef */
 import { getRockets } from '../../API/services';
-import RETRIEVE_ROCKETS from './types';
+import { RETRIEVE_ROCKETS, CHANGE_ROCKET_STATUS } from './types';
 
 const retrieveRockets = () => async (dispatch) => {
   // fetch rockets from the API
@@ -8,14 +7,19 @@ const retrieveRockets = () => async (dispatch) => {
 
   // organise Rockets
   const rockets = response.data.map((data) => ({
-    rocket_id: data.rocket_id,
-    rocket_name: data.rocket_name,
+    rocketId: data.rocket_id,
+    rocketName: data.rocket_name,
     description: data.description,
-    flickr_images: data.flickr_images[0],
+    rocketsImg: data.flickr_images[0],
   }));
 
   // combine data to the store
   dispatch({ type: RETRIEVE_ROCKETS, rockets });
 };
 
-export default retrieveRockets;
+const updateRocketStatus = (id, status) => ({
+  type: CHANGE_ROCKET_STATUS,
+  payload: { id, status },
+});
+
+export { updateRocketStatus, retrieveRockets };

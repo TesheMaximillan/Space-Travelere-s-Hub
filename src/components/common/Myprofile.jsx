@@ -1,5 +1,6 @@
 import React from 'react';
 import MissionProfile from './MissionProfile';
+import RocketProfile from './RocketProfile';
 import styles from './Myprofile.module.scss';
 
 function Myprofile() {
@@ -17,7 +18,7 @@ function Myprofile() {
       <div className={profiles}>
         <h1>My Rockets</h1>
         <ul className={profile}>
-          <MissionProfile list={list} />
+          <RocketProfile list={list} />
         </ul>
       </div>
     </div>
