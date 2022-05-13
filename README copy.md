@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore App
+# Space Traveler's Hub
 
 > In this project we are worked with the real live data from the SpaceX API. And in this project we build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.:
 
@@ -23,21 +23,23 @@ The mission data fetched data when use navigates to the mission actions
 
 ## Live Demo
 
-[Live Demo Link](https://bookstoreteshe.herokuapp.com/)
+[Live Demo Link](https://space-travelers-app-ht.herokuapp.com/myprofiles)
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/51437483/167161514-ddffb713-913c-4eec-af47-4280bc79da4c.png)
+**Rockets:** ![rockets](https://user-images.githubusercontent.com/51437483/168374076-8658bdc0-9b9b-4efd-90fb-984cbf34587a.JPG)
+**Missions:** ![mission](https://user-images.githubusercontent.com/51437483/168374064-b61e298c-7c93-4849-a3b9-ced1d0e8311a.JPG)
+**Myprofile:** ![myprofile](https://user-images.githubusercontent.com/51437483/168374037-0b43e096-f111-43d7-b1b1-a9f54f753341.JPG)
 
 ## Setup project in your local machine
 
 1. Clone the repository by using `git clone ...`
-2. Go to the project directory by using `cd Bookstore`
+2. Go to the project directory by using `cd Space-Traveler-s-Hub`
 3. run `npm install` to install the necessary packages
 4. run `npm start` to start the project
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Author
+## Authors
 
 👤 **Teshome Kurabachew**
 
@@ -45,13 +47,19 @@ The mission data fetched data when use navigates to the mission actions
 - Twitter: [@twitterhandle](https://twitter.com/TesheKura)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/teshome-kurabachew-aa8067180/)
 
+👤 **Have Samuel**
+
+- GitHub: [Have-Samuel](https://github.com/Have-Samuel)
+- Twitter: [@samhave1](https://twitter.com/@samhave1)
+- LinkedIn: [Have Samuel Kabreebe](https://linkedin.com/in/Have-Samuel-Kabreebe)
+
 ## Credential
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/TesheMaximillan/Bookstore/issues).
+Feel free to check the [issues page](https://github.com/TesheMaximillan/Space-Travelere-s-Hub/issues).
 
 ## Show your support
 
